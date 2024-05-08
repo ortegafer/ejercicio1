@@ -5,3 +5,9 @@ head(datos)
 dim(datos)
 #numero pedidos
 length(unique(datos$Invoice))
+
+#precio medio de producto por envio
+
+library(dplyr)
+datos %>% group_by(Invoice) %>% 
+  summarise(Precio_medio= mean(Price))
