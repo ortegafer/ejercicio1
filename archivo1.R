@@ -11,3 +11,12 @@ length(unique(datos$Invoice))
 library(dplyr)
 datos %>% group_by(Invoice) %>% 
   summarise(Precio_medio= mean(Price))
+
+#numero de productos por pedido
+
+datos %>% group_by(Invoice) %>% 
+  summarise(Cantidad= sum(Quantity))
+
+#precio por pedido
+datos %>% group_by(Invoice) %>% 
+  summarise(Precio= sum(Price))
