@@ -20,3 +20,5 @@ datos %>% group_by(Invoice) %>%
 #precio por pedido
 datos %>% group_by(Invoice) %>% 
   summarise(Precio= sum(Price))
+
+#hola caracola 
